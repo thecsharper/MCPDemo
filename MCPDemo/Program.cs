@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
 using System.ComponentModel;
 using ModelContextProtocol;
+using ModelContextProtocol.Server;
 
 // From: https://laurentkempe.com/2025/03/22/model-context-protocol-made-easy-building-an-mcp-server-in-csharp/
 
