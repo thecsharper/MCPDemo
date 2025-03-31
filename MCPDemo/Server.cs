@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using ModelContextProtocol.Client;
 using ModelContextProtocol.Configuration;
 using ModelContextProtocol.Protocol.Transport;
+using Microsoft.Extensions.AI.Ollama;
 
 Console.WriteLine("Hello, official MCP csharp-sdk and MCP Server!");
 
