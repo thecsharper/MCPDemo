@@ -33,20 +33,20 @@ public class Server
 
         using var factory =
             LoggerFactory.Create(builder => builder.AddConsole().SetMinimumLevel(LogLevel.Trace));
+
         // 👇🏼 Get an MCP session scope used to get the MCP tools
 
         await using var mcpClient = await McpClientFactory.CreateAsync(config, options);
-        // Existing code
 
+        // Existing code
         var ollamaChatClient =
             new OllamaChatClient(new Uri("http://localhost:11434/"), "llama3.2:3b");
         var client = new ChatClientBuilder(ollamaChatClient)
-            // 👇🏼 Add logging to the chat client, wrapping the function invocation client 
 
+            // 👇🏼 Add logging to the chat client, wrapping the function invocation client 
             .UseLogging(factory)
 
             // 👇🏼 Add function invocation to the chat client, wrapping the Ollama client
-
             .UseFunctionInvocation()
 
             .Build();
